@@ -8,9 +8,9 @@ def bubble_sort(list_of_nums):
     """Sorts the list in-place using the Bubble Sort algorithm."""
 
     for iteration in range(len(list_of_nums)): # Do n times
-        for i in range(len(list_of_nums)):
-            if list_of_nums[i] > list_of_nums[i+1]:
-                swap(list_of_nums, i, i+1)
+        for i in range(1, len(list_of_nums)):
+            if list_of_nums[i-1] > list_of_nums[i]:
+                swap(list_of_nums, i-1, i)
 
 
 if __name__ == '__main__':
